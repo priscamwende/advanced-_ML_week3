@@ -49,13 +49,14 @@ Converting datetime columns
 
 Ensuring consistent hourly time series format
 
+
 2. **Feature Engineering**
 
 Lag features (e.g., PM2.5(t-1), PM2.5(t-24))
 
 Rolling statistics (mean, std, moving averages)
 
-Time-based features:
+**Time-based features:**
 
 Hour of day
 
@@ -63,7 +64,7 @@ Day of week
 
 Month / seasonality
 
-Meteorological influence variables:
+**Meteorological influence variables:**
 
 Temperature
 
@@ -77,6 +78,7 @@ The following models were explored:
 
 1. ARIMA (baseline univariate model)
 2. SARIMA (seasonal time series modeling)
+3. Advanced enhancement: Log-transformed rolling ARIMA
 
 
 Each model was trained on the training set and tuned where applicable.
@@ -85,9 +87,11 @@ Each model was trained on the training set and tuned where applicable.
 
 Models were evaluated using:
 
-1. MAE (Mean Absolute Error)
-2. RMSE (Root Mean Squared Error)
-3. R² Score (where applicable)
+1. MAE 
+2. RMSE
+3. R² Score
+4. AIC
+5. BIC
 
 Performance comparison was done to determine the best forecasting approach.
 
